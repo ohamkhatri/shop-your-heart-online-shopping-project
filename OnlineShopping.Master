@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OnlineShopping.Master.cs" Inherits="OnlineShopping.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server"  >
+    <link href="navbar.css" rel="stylesheet" />
+    <title>OnlineShopping</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+      
+
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="form1" runat="server">
+        <div id="menubar" runat="server"  style="background-color: #161616; width:100%;"  >
+             <%--<span runat="server" class="content"  >shop your heart</span>--%>
+            <label runat="server" class="logo">Shop your heart</label>
+             <asp:Button Visible="true" ID="btnaboutus" class="btn" runat="server" Text="About us" OnClick="btnaboutus_Click" Width="125px" />
+                 <asp:Button ID="btnhome" runat="server" class="btn" Visible="true" Text="Home" OnClick="btnhome_Click" Width="125px" />
+                  <asp:Button ID="btnCategory" runat="server" class="btn" Visible="true" Text="Category" OnClick="btnCategory_Click" Width="125px" />
+                  <asp:Button ID="btnProduct" runat="server" class="btn" Visible="true" Text="Product" OnClick="btnProduct_Click" Width="125px" />
+                  <asp:Button  runat="server" ID="btnloginhistory" class="btn" Text="Login history" Width="150px" OnClick="btnloginhistory_Click"/>
+                  <asp:Button runat="server" ID="btnResetPass" class="btn" Text="Reset Password" Width="180px" OnClick="btnResetPass_Click" />
+                 <%--<asp:Button runat="server" ID="btn_logout" class="btn"  Text="Logout" Width="125px" OnClick="btn_logout_Click" Visible="true" />--%>
+                  <asp:Button runat="server" ID="btnorders" class="btn"  Text="Orders" Width="125px" OnClick="btnorders_Click" />
+               <asp:Button runat="server" class="btn" Text="Cart" ID="btncart" Width="125px" OnClick="btncart_Click" />
+        </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <%--<footer></footer>--%>
+            </asp:ContentPlaceHolder>
+        
+    </form>
+   
+    
+</body>
+</html>
